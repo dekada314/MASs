@@ -5,7 +5,7 @@ class Agent(FixedAgent):
     
     ALIVE = 1
     DEAD = 0
-        
+    
     @property
     def is_alive(self):
         return self.state == self.ALIVE

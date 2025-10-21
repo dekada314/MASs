@@ -4,10 +4,10 @@ from agents import Agent
 
 
 class Life_game(Model):
-    def __init__(self, seed = None, widht = 20, height = 20, initial_fraction_alive = 0.2):
+    def __init__(self, seed = None, width = 50, height = 50, initial_fraction_alive = 0.2):
         super().__init__(seed=seed)
         
-        self.grid = OrthogonalMooreGrid((widht, height), capacity=1)
+        self.grid = OrthogonalMooreGrid((width, height), capacity=1, torus=True)
         
         for cell in self.grid.all_cells:
             Agent(

@@ -1,4 +1,4 @@
-from mesa.examples.basic.conways_game_of_life.model import ConwaysGameOfLife
+from model import Life_game
 from mesa.visualization import (
     SolaraViz,
     SpaceRenderer,
@@ -53,7 +53,7 @@ model_params = {
 }
 
 # Create initial model instance
-model1 = ConwaysGameOfLife()
+model1 = Life_game()
 
 renderer = SpaceRenderer(model1, backend="matplotlib")
 # In this case the renderer only draws the agents because we just want to observe
