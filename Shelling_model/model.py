@@ -15,7 +15,7 @@ class Schelling(Model):
         homophily: float = 0.4,
         radius: int = 1,
         seed = None,
-    ):
+    ) -> None:
         
         super().__init__(seed=seed)
 
@@ -54,7 +54,7 @@ class Schelling(Model):
         self.agents.do("assign_state")
         self.datacollector.collect(self)
 
-    def step(self):
+    def step(self) -> None:
         self.happy = 0  
         self.agents.shuffle_do("step")  
         self.agents.do("assign_state")
